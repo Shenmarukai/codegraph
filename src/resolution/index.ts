@@ -498,7 +498,7 @@ export class ReferenceResolver {
       );
       if (resolvedPath) {
         const targetNodeId = `file:${resolvedPath}`;
-        if (this.context.fileExists(resolvedPath)) {
+        if (this.queries.getNodeById(targetNodeId)) {
           return {
             original: ref,
             targetNodeId,
